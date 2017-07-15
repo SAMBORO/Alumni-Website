@@ -1,0 +1,278 @@
+
+
+/* CSS
+--------------------------------------------------*/
+body {
+	background: #FFFFFF;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10pt;
+	margin: 0;
+	padding: 0;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,form,fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+/* Links
+--------------------------------------------------*/
+a {
+	text-decoration: underline;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+a img {
+	border: none;
+}
+
+/* IDs
+--------------------------------------------------*/
+#wrapper {
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#content {
+	background: transparent url(../resources/graf_bg_shade.jpg) repeat-x top;
+	text-align: left;
+}
+
+#logohead {
+	background: #FFFFFF;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#logofoot {
+	background: #FFFFFF;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#pagehead {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: "Verdana", Helvetica, sans-serif;
+	font-size: 7pt;
+}
+
+#pagehead p {
+	line-height: 13pt;
+}
+
+#pagehead a {
+	color: #000000;
+}
+
+#subhead {
+	margin: 0 0 10px 0;
+}
+
+#pageband {
+	background: transparent url(../resources/graf_bg_shade.jpg) repeat-x top;
+	color: #000000;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 60px;
+}
+
+#pagefoot {
+	background: transparent url(../resources/graf_bg_shade.jpg) repeat-x top;
+	color: #000000;
+	height: 50px;
+	padding: 5px;
+	font-family: "Verdana", Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	margin: 10px 0 10px 0;
+	text-align: center;
+}
+
+#pagefoot a {
+	color: #000000;
+}
+
+#mainimage {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#mainimage img {
+	margin-bottom: 10px;
+}
+
+#altmainimage {
+	padding: 10px 0 10px 0;
+	margin: 0 0 10px 0;
+	width: 740px;
+	overflow: auto;
+	text-align: center;
+}
+
+/* Classes
+--------------------------------------------------*/
+.low {
+	display: none;
+}
+
+.foo {
+	vertical-align: middle;
+}
+
+.smalltext {
+	font-size: 8pt;
+}
+
+.clearer {
+	clear: both;
+	line-height: 0;
+}
+
+.left {
+	float: left;
+	clear: right;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.metatitle {
+	margin-bottom: 10px;
+}
+
+.metatitle1 a {
+	text-decoration: none;
+}
+
+.metatitle1 a:hover {
+	color: #7ba9c4;
+}
+
+.metatitle2 {
+	font-size: 70%;
+	font-style: italic;
+	margin-left: 10px;
+	margin-top: 0.5em;
+	float: left;
+}
+
+.metatitle3 {
+	float: right;
+}
+
+.imagemetatitle1 {
+	float: left;
+	margin-right: 8px;
+}
+
+.imagemetatitle2 {
+	font-style: italic;
+	float: left;
+	margin-left: 2px;
+}
+
+.imagemetatitle3 {
+	float: right;
+}
+
+.imagemetatitle4 {
+	float: left;
+}
+
+.metabox {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 5px;
+	border: 1px solid #999999;
+	text-align: left;
+	font-family: "Verdana", Helvetica, sans-serif;
+	font-size: 7pt;
+	width: 760px;
+	margin: 0 auto;
+}
+
+.metaitem {
+	margin-bottom: 3px;
+}
+
+.thumbcontainer {
+	padding: 5px;
+	background: #F1F6F6;
+	height: auto;
+	display: table-cell;
+	border: 1px solid #C6D2D2;
+}
+
+.thumbmeta {
+	color: #000000;
+	font-family: "Verdana", Helvetica, sans-serif;
+	font-size: 7pt;
+	margin-top: 5px;
+	text-align: left;
+}
+
+.imagenav {
+	width: 760px;
+	padding: 5px;
+	margin: 0 auto;
+	font-size: 8pt;
+	color: #000000;
+	font-family: "Verdana", Helvetica, sans-serif;
+}
+
+.imagenav a {
+	color: #000000;
+}
+
+.framediv {
+	margin-bottom: 5px;
+}
+
+/* Headings
+--------------------------------------------------*/
+h1 {
+	font-size: 18pt;
+	color: #000000;
+	font-weight: bolder;
+	margin: 10px 0 10px 0;
+	padding: 5px 0 5px 0;
+	font-family: "Arial", Helvetica, sans-serif;
+	text-align: center;
+}
+
+#subhead h1 {
+	margin: 10px 0 0 0;
+}
+
+/* Images
+--------------------------------------------------*/
+/* Tables
+--------------------------------------------------*/
+caption {
+	display: none;
+}
+
+td.thumbtable {
+	padding: 5px;
+}
+

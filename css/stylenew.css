@@ -1,0 +1,515 @@
+* { margin: 0; padding: 0; outline:0; }
+
+body {
+    font-size: 11px;
+    line-height: 16px;
+    font-family: Verdana;
+    color: #585f63;
+    background: #E3E4DA;
+}
+
+html, body {
+    height: 100%;
+}
+
+a { color: #172831; text-decoration: none; cursor:pointer; }
+a:hover { text-decoration: underline; }
+
+a img { border: 0; }
+
+input, textarea, select { font-family: Verdana; font-size:12px; }
+textarea { overflow:hidden; }
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+.space {padding-right: .5px;
+}
+
+.shell { width: 960px; margin: 0 auto; }
+
+#header {
+	height: 112px;
+	
+}
+#header .shell {  }
+#header2{
+	height: 70px;
+	background-image: url(../images/buttonback1.png);
+	background-repeat: repeat-x;
+	position: relative;
+}
+#header2 .shell { background: url(../images/buttonback.png) repeat-x 0 0; }
+
+/*Navigation*/
+/*Navigation*/
+
+/* remove all list stylings */
+.menu, .menu ul {
+	margin: 0 15px ;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+	font-size: 12px;
+
+}
+
+.menu li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;	/* move all main list items into one row, by floating them */
+	position: relative;	/* position each LI, thus creating potential IE.win overlap problem */
+	z-index: 5;		/* thus we need to apply explicit z-index here... */
+}
+
+.menu li:hover {
+	z-index: 10000;	/* ...and here. this makes sure active item is always above anything else in the menu */
+	white-space: normal;/* required to resolve IE7 :hover bug (z-index above is ignored if this is not present)
+							see http://www.tanfa.co.uk/css/articles/pure-css-popups-bug.asp for other stuff that work */
+}
+
+.menu li li {
+	float: none;/* items of the nested menus are kept on separate lines */
+}
+
+.menu ul {
+	visibility: hidden;	/* initially hide all submenus. */
+	position: absolute;
+	z-index: 10;
+	left: 0;	/* while hidden, always keep them at the top left corner, */
+	top: 0;		/* 		to avoid scrollbars as much as possible */
+}
+
+.menu li:hover>ul {
+	visibility: visible;	/* display submenu them on hover */
+	top: 100%;	/* 1st level go below their parent item */
+}
+
+.menu li li:hover>ul {	/* 2nd+ levels go on the right side of the parent item */
+	top: 0;
+	left: 100%;
+}
+
+/* -- float.clear --
+	force containment of floated LIs inside of UL */
+.menu:after, .menu ul:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.menu, .menu ul {	/* IE7 float clear: */
+	min-height: 0;
+}
+/* -- float.clear.END --  */
+
+/* -- sticky.submenu --
+	it should not disappear when your mouse moves a bit outside the submenu
+	YOU SHOULD NOT STYLE the background of the ".menu UL" or this feature may not work properly!
+	if you do it, make sure you 110% know what you do */
+.menu ul {
+	background-image: url(empty.gif);	/* required for sticky to work in IE6 and IE7 - due to their (different) hover bugs */
+	padding: 10px 30px 30px 30px;
+	margin: -10px 0 0 -30px;
+	/*background: #f00;*/	/* uncomment this if you want to see the "safe" area.
+								you can also use to adjust the safe area to your requirement */
+}
+.menu ul ul {
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+}
+/* -- sticky.submenu.END -- */
+
+
+
+
+
+
+/* - - - ADxMenu: DESIGN styles [ OPTIONAL, design your heart out :) ] - - - */
+
+.menu, .menu ul li {
+	color: #567;
+	 
+	background: #84888a;
+}
+
+.menu ul {
+	width: 10em;
+}
+
+.menu a {
+	text-decoration: none;
+	color: #eee;
+	padding: .4em 1em;
+	display: block;
+	position: relative;
+}
+
+.menu a:hover, .menu li:hover>a {
+	color: #eee;
+}
+
+.menu li li {	/* create borders around each item */
+	border: 1px solid #ccc;
+}
+.menu ul>li + li {	/* and remove the top border on all but first item in the list */
+	border-top: 0;
+}
+
+.menu li li:hover>ul {	/* inset 2nd+ submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+/* special colouring for "Main menu:", and for "xx submenu" items in ADxMenu
+	placed here to clarify the terminology I use when referencing submenus in posts 
+.menu>li:first-child>a, .menu li + li + li li:first-child>a {
+	color: #567;
+}*/
+
+/* Fix for IE5/Mac \*//*/
+.menu a {
+	float: left;
+}
+/* End Fix */
+
+/*]]>*/
+
+
+
+
+
+
+[if lte IE 6]>
+<style type="text/css" media="screen, tv, projection">
+/*<![CDATA[*/
+
+/* - - - ADxMenu: IE6 BASIC styles [MANDATORY] - - - */
+
+/*
+	this rules improves accessibility - if Javascript is disabled, the entire menu will be visible
+	of course, that means that it might require different styling then.
+	in which case you can use adxie class - see: aplus.co.yu/adxmenu/examples/ie6-double-style/
+ */
+.menu ul {
+	visibility: visible;
+	position: static;
+}
+
+.menu, .menu ul {	/* float.clear */
+	zoom: 1;
+}
+
+.menu li.adxmhover {
+	z-index: 10000;
+}
+
+.menu .adxmhoverUL {	/* li:hover>ul selector */
+	visibility: visible;
+}
+
+
+.menu .adxmhoverUL {	/* 1st-level submenu go below their parent item */
+	top: 100%;
+	left: 0;
+}
+
+.menu .adxmhoverUL .adxmhoverUL {	/* 2nd+ levels go on the right side of the parent item */
+	top: 0;
+	left: 100%;
+}
+
+/* - - - ADxMenu: DESIGN styles - - - */
+
+.menu ul a {	/* fix clickability-area problem */
+	zoom: 1;
+}
+
+.menu li li {	/* fix white gap problem */
+	float: left;
+	width: 100%;
+}
+
+.menu li li {	/* prevent double-line between items */
+	margin-top: -1px;
+}
+
+.menu a:hover, .menu .adxmhoverA {		/* li:hover>a selector */
+	color: #fc3;
+}
+
+.menu .adxmhoverUL .adxmhoverUL {	/* inset 2nd+ submenus, to show off overlapping */
+	top: 5px;
+	left: 90%;
+}
+
+/*]]>*/
+
+
+
+
+#internalboxes {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	width: 300px;
+	border: 1px solid #999999;
+	float: right;
+	top: 200px;
+	padding-left: 3px;
+	position: static;
+	margin-left: 5px;
+	line-height: 16px;
+}
+#internalboxes  h2  { font-size: 16px; line-height: 19px; color: #748188; border-bottom: 1px dotted #dcdcdc; padding: 0 0 6px 0; margin: 0 0 9px 0; }
+#internalboxes  img { margin: 0 10px 0 0; }
+#internalboxes  p a { text-decoration: underline; }
+#internalboxes p a:hover { text-decoration: underline; }
+
+/*center picture /*/
+#header3 {
+	
+
+}
+#head .shell {  height: 298px; }
+
+img.shadow {
+	background: #fff no-repeat right bottom;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#featured{
+	width:1000px;
+	position:relative;
+
+	height:345px;
+	margin-top: 0px;	
+	
+
+	
+	
+}
+#featured ul.ui-tabs-nav{ 
+	position:absolute; 
+	top:0; left:615px; 
+	list-style:none; 
+	padding:0; margin:0; 
+	width:350px; 
+}
+#featured ul.ui-tabs-nav li{ 
+	padding:5px 0; padding-left:13px;  
+	font-size:12px; 
+	color:#748188; 
+	font-family:Verdana;
+
+}
+#featured ul.ui-tabs-nav li img{ 
+	float:left; margin:1px 1px; 
+
+	padding:2px; 
+	border:1px solid #A9A3AD;
+}
+#featured ul.ui-tabs-nav li span{ 
+	font-size:11px; font-family:Verdana; 
+	line-height:18px; 
+}
+/*active nav for center picture /*/
+#featured li.ui-tabs-nav-item a{
+	display:block;
+	height:50px;
+	color:#bbbbb;
+
+	line-height:20px;
+	text-align: left;
+}
+#featured li.ui-tabs-nav-item a:hover{ 
+	background:#f2f2f2; 
+}
+#featured li.ui-tabs-selected{ 
+	background:url('../images/selected-item.gif') top left no-repeat;  
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{ 
+	 
+
+	
+	border:1px solid #A9A3AD;
+}
+/*center picture /*/
+#featured .ui-tabs-panel{
+	width:588px;
+	height:310px;
+	
+	position:relative;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+#featured .ui-tabs-panel .info{
+	position:absolute;
+	top:250px;
+	left:300px;
+	height:16px;
+	
+	
+}
+#featured .info {
+	font-size:12px;
+	font-family:Verdana, serif;
+	color:#6699CC;
+	padding:2px;
+	margin:0;
+	overflow:hidden;
+	font-weight: bold;
+	background: url('../images/transparent-bg.png');
+}
+#featured .info p{ 
+	margin:0 5px; 
+	font-family:Verdana; font-size:11px; 
+	line-height:15px; color:#f0f0f0;
+	
+}
+#featured .info a{
+	text-decoration:none;
+	color:#fff;
+}
+#featured .info a:hover{ 
+	text-decoration:underline; 
+}
+#featured .ui-tabs-hide{ 
+	display:none; 
+}
+
+#tablebox3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	line-height: 16px;
+	padding: 5px;
+	margin: 3px;
+}
+.tablebox3{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	line-height: 16px;
+	padding: 5px;
+	margin: 3px;
+}
+.tablebox3 h1{ font-size: 16px; line-height: 19px; color: #2A4B7E; border-bottom: 1px dotted #dcdcdc; padding: 0 0 6px 0; margin: 0 0 9px 0; }
+
+.titlesecond h4 {
+	font-size: 12px;
+	line-height: 15px;
+	color: #8A778B;
+	border-bottom: 1px dotted #dcdcdc;
+	padding: 0 0 4px 0;
+	margin: 0 0 4px 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+#main {   padding: 10px 0 10px 0; }
+#main .btn-more { background: url(../images/button.png) no-repeat 0 0; width: 84px; height: 25px; font-size: 11px; line-height: 25px; color: #fff; text-align: center; display: block; }
+#main .btn-more:hover { text-decoration: none; }
+
+.boxes { padding: 0 0 27px 0; }
+.boxes .box-white { margin: 0 25px 0 0; }
+.boxes .box-white-last { margin:0; }
+.box-white { background: #fff; width: 266px; height: 255px; border: 1px solid #84888A; padding: 12px 17px 54px 17px; position: relative; }
+.box-white h1  { font-size: 16px; line-height: 19px; color: #2A4B7E; border-bottom: 1px dotted #dcdcdc; padding: 0 0 6px 0; margin: 0 0 9px 0; }
+.box-white img { margin: 0 10px 0 0; }
+.box-white p a { text-decoration: underline; }
+.box-white p a:hover { text-decoration: none; }
+.box-white .btn-more { position: absolute; bottom:14px;left:17px; }
+
+.box-white .item { border-bottom: 1px dotted #dcdcdc; padding: 0 0 19px 0; margin: 0 0 10px 0; }
+.box-white .item span { font-size: 10px; line-height: 13px; color: #4372a5; }
+.box-white .item-last { border:0; }
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #e0e0e0;
+	font-family:Verdana;
+
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #748188;
+	font-family:Verdana;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+	
+}
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1em;
+}
+
+#footer { background: url(../images/footer.png) repeat-x 0 0; height: 50px; }
+#footer .nav { padding: 15px 0 0 3px; }
+#footer .nav ul { list-style: none; }
+#footer .nav ul li { display: inline; font-size: 10px; line-height: 10px; border-right: 1px solid #969090; padding: 0 5px 0 0; margin: 0 5px 0 0; }
+#footer .nav ul li.last { border:0; padding:0; margin:0; }
+#footer .nav ul li a { color: #c1c1c1; }
+#footer .nav ul li a:hover { text-decoration: underline; }
+
+#footer .copy { font-family: Verdana, Arial, sans-serif; font-size: 10px; line-height: 10px; color: #c1c1c1; padding: 19px 0 0 0; }
+#footer .copy a { color: #dad7d7; text-transform: uppercase; text-decoration: underline; }
+#footer .copy a:hover { text-decoration: none; }
+
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -45px; /* The bottom margin is the negative value of the footer's height */
+}
+#footer, #footer-push {
+    height: 45px; /* #footer-push must be the same height as #footer */
+}

@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+<link rel="shortcut icon" href="favicon.ico"> 
+    
+        <link rel="stylesheet" type="text/css" href="css/styleMain.css" />
+		<link rel="stylesheet" type="text/css" href="css/paneltab.css" />
+        <style type="text/css">
+<!--
+.style59 {color: #CC0000}
+-->
+        </style>
+<noscript>
+			<link rel="stylesheet" type="text/css" href="css/noscript.css" />
+</noscript>
+
+		
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>NIT Agartala Alumni</title>
+<style type="text/css">
+
+
+.mc {
+	padding: 0px;
+	height: auto;
+	width: auto;
+	border: thin solid #999999;
+	margin-top: -22px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	
+	position: relative;
+}
+.style7 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 16px;
+	padding-top: 0px;
+}
+
+.style9 {font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: x-large; }
+.style17 {font-family: Verdana, Arial, Helvetica, sans-serif; color: #003366; }
+.style18 {font-size: x-large}
+p.style5:hover {
+	
+	color:white;
+	text-decoration:none;
+	background:#00E6B8;
+}
+midstyle {
+	background-color: #CCFF00;
+	margin: 0px;
+}
+midstf {
+	margin: 0px;
+	width: auto;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #999999;
+	border-bottom-color: #999999;
+}
+.mids {
+	background-color: #CCFF00;
+	margin: 0px;
+	width: 100%;
+	position: relative;
+	top: 0px;
+}
+.fooobj {
+	background-color: #CCFF00;
+	margin: 0px;
+	width: auto;
+}
+.underline
+{
+border-bottom:1px solid #0099FF;
+width:2em;
+padding-bottom:20px;
+transition:0.5s ease;
+}
+.underline:hover
+{
+transition:0.5s ease;
+border-bottom:1px solid #0099FF;
+width:6.5em;
+
+}
+.style25 {font-family: Verdana, Arial, Helvetica, sans-serif; color: #003366; font-size: 12px; }
+.newblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+.textblock {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+}
+.rightfoot {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.splitbox {
+	background-color: #23ACC5;
+	width: 100%;
+	
+}
+.splitbox2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #1A7E91;
+	height: 100%;
+	width: 100%;
+}
+.splitbox3 {
+	background-color: #146270;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-large;
+}
+.style36 {
+	background-color: #146270;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	color: #FFFFFF;
+	padding: 10px;
+}
+.stylemybox {
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12;
+	color: #FFFFFF;
+	padding: 10px;
+}
+.style37 {font-size: 12px}
+.style38 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #2CA6D9;
+	font-size: x-large;
+}
+input.mystyle1
+{
+background:#CCCCCC;
+border:#0099CC;
+
+
+}
+
+</style>
+ 
+		<script type="text/javascript">
+function validate_name(event)
+{
+	var chCode = ('charCode' in event) ? event.charCode : event.keyCode;
+                // returns false if a numeric character has been entered
+				var span = document.getElementById("name_rs");
+				if(!(chCode < 48 /* '0' */ || chCode > 57) )
+				{
+				//alert("Numbers not allowed");
+				span.innerHTML = "Numbers not allowed";
+				}
+				else
+				{
+				span.innerHTML = '';
+				}
+    return ((chCode < 48 /* '0' */ || chCode > 57) /* '9' */);
+}
+
+function validateForm(form)
+	{
+		var span_name = document.getElementById("name_rs");
+		var span_contact = document.getElementById("contact_rs");
+		var span_email = document.getElementById("email_rs");
+		var span_message = document.getElementById("message_rs");
+		
+		
+			if(form.name.value == '')
+			{
+				
+				span_name.innerHTML = "Name cannot be empty.";
+				return false;
+			}	
+			else if (form.contact.value == '')
+				{
+					
+					span_contact.innerHTML = "Your contact is important<br> it cannot be empty.";
+					return false;
+				}
+					
+						else if( form.message.value == '')
+			{
+				span_message.innerHTML = "Blank message can not be submitted";
+				return false;
+			}
+			else
+			{return true;
+		}		
+	
+	}
+	
+	function validate_field(event)
+{
+		var span_name = document.getElementById("name_rs");
+		var span_contact = document.getElementById("contact_rs");
+		var span_email = document.getElementById("email_rs");
+		var span_message = document.getElementById("message_rs");
+		    
+				
+				span_name.innerHTML = '';
+				span_contact.innerHTML = '';
+				span_email.innerHTML = '';
+				span_message.innerHTML = '';
+    return (true);
+}
+
+
+</script>
+
+<script src="js/ga.js" async="" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+	    $(document).ready(function(){  
+    $("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 9000, false);  
+    $("#featured").hover(  
+    function() {  
+    $("#featured").tabs("rotate",0, false);  
+    },  
+    function() {  
+    $("#featured").tabs("rotate",9000, false);  
+    }  
+    );  
+    });  
+</script>
+   
+    
+<script type="text/javascript" src="js/ADxMenu.js"></script><style type="text/css" media="all">
+.menu ul {visibility:hidden; position:absolute;}.style41 {
+	color: #666666;
+	font-size: 12px;
+}
+.style43 {color: #003366}
+.style45 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	top: 5px;
+	margin: 8px;
+}
+.style48 {padding-top: 0px; color: #FFFFFF;}
+.style55 {font-size: x-large; color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.style58 {
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25297781-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+
+
+function openpopup(){
+var popurl="cmsoon.html"
+winpops=window.open(popurl,"","width=600,height=350,scrollbars,")
+}
+
+</script>
+<script type="text/javascript">
+
+
+function openpopup2(){
+var popurl="cmsoon.html"
+winpops=window.open(popurl,"","width=600,height=350,scrollbars,")
+}
+
+</script>
+<script type="text/javascript">
+
+
+function openpopup3(){
+var popurl="cmsoon.html"
+winpops=window.open(popurl,"","width=600,height=350,scrollbars,")
+}
+
+</script>
+<script type="text/javascript">
+
+
+function openpopup4(){
+var popurl="cmsoon.html"
+winpops=window.open(popurl,"","width=600,height=350,scrollbars,")
+}
+
+</script>
+<script type="text/javascript">
+
+
+function openpopup5(){
+var popurl="cmsoon.html"
+winpops=window.open(popurl,"","width=600,height=350,scrollbars,")
+}
+
+</script>
+	
+	
+</head>
+
+<body leftmargin="0">
+
+
+
+
+
+<div class="upper">
+<div class="upper-left">
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    
+    <td  width="65%" background="images/BG.PNG" bgcolor="#FFFFFF" >
+	
+	<div id="header3">
+	<div class="shell">
+		<!-- main content starts here -->
+
+        <div class="ui-tabs-nav" id="featured">
+		  <ul class="ui-tabs-nav">
+	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><img src="images/1.png" alt="Open Revolution" height="40" width="80"><span> NITA Golden Jubilee year long program innauguration</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="images/2.png" alt="Chuck Severance" height="40" width="80"><span> Mid year Gettogether of NITA Alumni Delhi Chapter-30-082014 </span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="images/3.png" alt="Robert Johnson" height="40" width="80"><span>Spoprts Skills during Annual Alumni Meet</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="images/4.png" alt="Joe Griffin" height="40" width="80"><span>2015 Silver Jubilee Batch</span></a></li>
+            <li class="ui-tabs-nav-item" id="nav-fragment-5"><a href="#fragment-5"><img src="images/5.png" alt="Julie Young" height="40" width="80"><span>The Grand Annual Alumni Meet during 2nd Saturday - Sunday of every year. </span></a></li>
+      </ul>
+
+	    <!-- First Content -->
+	    <div id="fragment-1" class="ui-tabs-panel" style="">
+	      <img src="images/1t.png" alt="Open Revolution" class="shadow" border="0" height="296" width="593" />
+	      <div class="info">
+		    Golden Jubilee  <a href="images/gallery/GJRally/index.html" title="Web Album">Web Album</a>		  </div>   </div>
+
+<!-- Second Content -->
+	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/2t.png" alt="News Flash" class="shadow" border="0">
+             <div class="info">
+		    Delhi Chapter-30-082014 <a href="images/gallery/DCmeet010914/index.html" title="Web Album">Web Album</a>		  </div>  </div>
+
+  <!-- Third Content -->
+	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/3t.png" alt="News Flash" class="shadow" border="0">
+<div class="info">
+			 Annual Alumni Meet-Sports		  </div> 
+	    </div>
+
+<!-- Fourth Content -->
+	    <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="images/4t.png" alt="News Flash" class="shadow" border="0">
+	  <div class="info">
+				 2015 Silver Jubilee Batch		  </div> 
+	    </div>
+<!-- Fifth Content -->
+	    <div id="fragment-5" class="ui-tabs-panel ui-tabs-hide" style="">
+		<img src="images/5t.png" alt="News Flash" class="shadow" border="0">
+    <div class="info">
+				 <a href="cmsoon.html" title="Find Out More about IMS">Learn More</a>		  </div> 
+	    </div>
+  </div>
+	</div>
+</div></td>
+  </tr>
+</table>
+<br>
+
+<div>
+<div>
+
+  <table width="100%" border="0" cellpadding="10" cellspacing="0" background="images/bg.png" bgcolor="#f6f6f6">
+    <tr>
+      <td colspan="4"><div align="center" class="style38">
+        <div align="center" class="style38">
+          <p>&nbsp;</p>
+          <p>Annual Alumni Meet 2017 of NIT Agartala &nbsp;(Erstwhile T.E. College)</p>
+          <p>&nbsp;</p>
+          <p> Alumni &nbsp;will be held on&nbsp;<span data-term="goog_1977986966" tabindex="0">14-01-2017 &amp; 15-01-2017</span>.<img src="images/newblue.gif" alt="New" width="31" height="12" /> </p>
+          <br />
+          <p class="style41">
+Foudation day celebration of NIT Agartala observed on 15-08-2016.</p>
+          <p class="style41">&nbsp;</p>
+        </div>
+        <p>&nbsp;</p>
+        <p>Delhi alumni Meet -2016 Accomplished Successfully </p>
+        <br>
+        <p class="style41">Delhi region Annual Alumni Meet 2016 scheduled on <strong>7th August 2016  </strong>.</p>
+        <p class="style41">&nbsp;</p>
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="4" valign="top">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4"><hr><br></td>
+    </tr>
+	<tr>
+      <td colspan="4" bgcolor="#146270"><table width="100%" border="0" cellpadding="15" cellspacing="0">
+          <tr>
+            <td width="30%" valign="top" bgcolor="#23ACC5"><div align="center" class="style55">
+              <p>&nbsp;</p>
+              <p>Photo Gallery </p>
+            </div>
+			<br>
+			<div class="stylemybox">
+			  <p align="center" class="style37">&nbsp;</p>
+                <ul>
+                  <li class="stylemybox style58"><a href="https://www.flickr.com/photos/136043053@N03/sets/72157659519313806/" target="_blank">Plantation Program by NIT Agartala Alumni at NIT Agartala Campus, APJ Abdul Kalam Block (near CSE Department) on Octobet 7, 2015</a></li>
+				  <li class="stylemybox style58">NIT Agartala Foundation day Celebration -2015 </li>
+				  <li class="stylemybox style58">NITA ALUMNI MEET 2015 -Kolkata Chapter </li>
+				  <li class="stylemybox style58">GLOBAL ALUMNI MEET 2015</li>
+				  <li class="stylemybox style58">Kolkata Chapter Get together cum AGM </li>
+                  <li class="stylemybox style58">Delhi Chapter Mid year Get together -30-08-2014 </li>
+                  <li class="stylemybox style58">NITA Golden Jubilee Innauguration Program </li>
+                </ul>
+                <p align="justify" class="style37">&nbsp;</p>
+              </div></td>
+            <td width="30%" valign="top" bgcolor="#1A7E91"><div align="center" class="style55">
+              <p>&nbsp;</p>
+              <p>Resources</p>
+            </div>
+              <p>&nbsp;</p>
+              <div class="bs-example">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. CONSTITUTION
+OF NATIONAL INSTITUTE OF TECHNOLOGY AGARTALA ALUMNI</a>                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>In the Interpretation of the memorandum of organization and rules and regulation of the
+organization, the following words and exposure of the meaning herein after assigned to
+them unless repugnant to or inconsistent with the subject or context.<br><br><a href="downloads/Constitution_NITAA_2012.pdf" target="_self"> Click to read more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. NIT Agartala Alumni Registered under Society Registration ACT 1860 </a>                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Regsitration Number 6766 of 2014.<br><br> <a href="downloads/Registration Certificate_.jpg" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Message from Prof. Mrinmoy Das </a>                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>I am extremely pleased to know that this year the present students and Alumni members of former Tripura Engineering College & now NIT ,Tripura are organising a Global Alumni Meet from 9th to 11th Jan, 2015. This type of Meet is a good opportunity to ex-change the views & experience of present students, Alumni members, present and retired faculty members and also the distinguished persons who will participate in the Meet. <br><br> <a href="downloads/Message from Prof. Mrinmoy Das 2015.pdf" target="_self">Read full.</a></p>
+                </div>
+            </div>
+        </div>
+		 <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. Contract Form</a>                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Dear Sir/ Madam,
+It is a great pleasure for us to inform you that the National Institute of Technology Agartala (Formerly Tripura
+Engineering College) Alumni will organize its Annual Alumni Meet- 2015 at Agartala and NIT Agartala campus on
+10th &11th January 2015 (Second Saturday &Sunday) respectively in a colourful way like previous years. <br><br><a href="downloads/Contract Form 2015.pdf" target="_blank">Click here to download the form.</a></p>
+                </div>
+            </div>
+        </div>
+		 <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">5. Souvenir Archives </a>                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>It is under construction. <a href="#" target="_blank"></a></p>
+                </div>
+            </div>
+        </div>
+		
+		
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">6. ALUMNI MERIT CUM MEANS SCHOLARSHIP RECIPIENTS </a>                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Every year during Annual Alumni Meet this scholarship is given to those students who are in need of financial assistance. The selection process is multi staged and purely on merit cum means basis.</p>
+                    <p><a href="downloads/Alumni Scholarship Recipients.pdf" target="_blank"><strong>Find the list of Scholarship Recipients</strong></a></p>
+                </div>
+            </div>
+        </div>
+		
+    </div>
+</div>			</td>
+            <td width="20%" valign="top"><div class="style36"><br />
+            <p align="center"> Giving Back  </p><br>
+            <p align="center" class="style37">Donation</p>
+            <p align="justify" class="style37">It would be of high order contribution for the ex-students of NIT Agartala(Erstwhile TEC) who are well established in their professional career being blessed with the education they had from NIT Agartala (Erstwhile TEC), to extend donation for building up a fund to the extent possible for the very purpose of auspicious help to the distressed students on special ground.</p>
+            <p align="justify" class="style37">&nbsp;</p>
+            <p align="justify" class="style37">The donation may also be paid through core banking facility in the bank </p>
+            <p align="justify" class="style37">S.B. <strong>A/C No. 31564324808 </strong></p>
+            <p align="left" class="style37"><strong>(Bank Code: 11491, IFSC Code SBIN0011491, </strong></p>
+            <p align="left" class="style37"><strong>MICR Code: 799002525) of the SBI, NIT Agartala Branch, Agartala. </strong></p>
+            <p align="justify" class="style37">&nbsp;</p>
+          </div></td>
+        </tr>
+      </table></td>
+	</tr>
+	<tr>
+      <td width="24%" valign="top" bgcolor="#f6f6f6">
+      <div align="justify" class="textblock style43 style45">
+      <p class="style18 underline">Prologue</p><br>
+        <p>Established in 1965, the Tripura Engineering College began as an adventure. </p>
+        <p>Today the vision of the founders stands materialized as a central institution of eminence. </p>
+        <p>Nearly 6,000 alumni of this Institute now spread all over the globe. Wherever they are and whatever their life journey has taken them to, there is one thing all alumni of this Institute shares. That is, a passion for the college. All agree that their alma-matter and their time at the college has left an indelible mark on their lives.</p>
+        <p>&nbsp;</p>
+      </div>
+      <div align="justify" class="textblock style43 style45">
+       
+        <p>Address</p>
+        <p>National Institute of Technology, Agartala
+P.O.: NIT Agartala
+Barjala, Jirania, TRIPURA (W)
+Pin: 799046 </p>
+        <p>&nbsp;</p>
+      </div> 
+	  <div align="justify" class="textblock style43 style45">
+
+        <p>Call</p>
+        <p>+91 94********  </p>
+        <p>&nbsp;</p>
+	  </div>
+	  <div align="justify" class="textblock style43 style45">
+
+        <p>email</p>
+        <p>admin@nitaa.in</p>
+      </div>      
+      <p class="style17">&nbsp;</p></td>
+      <td width="26%" valign="top" bgcolor="#f6f6f6">
+	  
+	  <div align="justify" class="textblock style43 style45">
+          <p class="style18 underline">Location&nbsp;and&nbsp;map</p><br>
+        <p>Longi: 91D25'22".661 (E339387.823m)<br>
+
+Lati: 23D58'26".904(N2637495.384m)<br>
+
+Height: 43.786 m above sea level<br>
+
+Rainfall: 2200 mm (apprx.)<br>
+
+Campus Area: 135 hect.<br>
+
+Temperature: 6\B0C to 35\B0C<br>
+
+Climate: Moderate</p>
+        <p align="center"><img src="images/tripura-map.jpg" width="160" height="191" /></p>
+      </div>	  </td>
+      <td width="30%" valign="top" bgcolor="#f6f6f6">
+        <div align="justify" class="textblock style43 style45">
+            <p class="style18 underline">Quick&nbsp;Links</p>
+            <br>
+          <p><a href="http://www.nita.ac.in" target="_blank">NIT Agartala</a>  <br />
+            <a href="https://www.tripura.gov.in" target="_blank">tripura.gov.in</a><br />
+          </p>
+          <p><br />
+            President: Er. Sukamal Bhattacharjee(1977 Batch)<br />
+            Secreatery:priyanathdas@yahoo.co.in<br />
+            Web Admin: admin@nitaa.in </p>
+          <p>&nbsp;</p>
+      </div>        
+      <p class="style9 style43 style45">&nbsp;</p>      </td>
+      <td width="25%" valign="top" bgcolor="#f6f6f6">  <div align="justify" class="textblock style43 style45">
+	   <p class="style18 underline">Say&nbsp;your&nbsp;views</p><br>
+     
+	  
+        
+      <form action="write_quick_view.php" method="post" name="form1" class="style17" id="form1" onSubmit="return validateForm(this)">
+        <p class="style25">Your name<br>
+		
+		<input id="name" class="mystyle1" name="name"  onKeyPress="return validate_name(event)" type="text" size="27"  /><br>
+		<span class="style59" id="name_rs">&nbsp;</span></p>
+		
+        <p class="style37">Contact No <br>
+		        <input class="mystyle1" name="contact" type="text" size="27" maxlength="10" onKeyPress="return validate_field(event)"/><br>
+       <span class="style59" id="contact_rs">&nbsp;</span></p>
+		<p class="style37">email</p>
+        <input class="mystyle1" name="email" type="text" size="27" onKeyPress="return validate_field(event)" />
+     
+      <p class="style25">Your Message   </p>
+	  
+      <p class="style25">
+        <textarea  name="message" cols="40" rows="8" onKeyPress="return validate_field(event)"></textarea>
+      </p><span class="style59" id="message_rs">&nbsp;</span>
+      <p align="left" class="style25">
+        <input type="submit" name="Submit" value="Submit" /> 
+        
+</p> 
+      </form>
+	  <br>
+	  View previous discussion
+      <span class="style17"><br>
+      <br>  
+      </span>
+	  </div>
+      <p class="style18 underline">The&nbsp;Team</p>
+      <div align="justify" class="textblock style43 style45">
+        <p>&nbsp;</p>
+        <p> <a href="downloads/EXECUTIVE COMMITTEE 2014.pdf">This site conceptualized , designd and regular maintained by Alumni members only.</a> <BR>:: Send your views for more enhancement  :: <br />
+        </p>
+        </div>
+      <p class="style9 style43 style45"></p>      <p align="left" class="style25">&nbsp;</p></td>
+	</tr>
+  </table>
+
+</div>
+
+
+  
+  <table width="100%" border="0" cellpadding="10" cellspacing="0">
+    
+   
+    <tr>
+      <td bgcolor="#0E424B"><span class="style7 style37 style41 style37"><span class="style37  style48">&copy;  All rights reserved-National Institute Of Technology Alumni, Agartala, Tripura, India |
+	  <br/>
+	  Powered By | NITA ALUMNI WEB-TEAM  </span></span>
+        <div class="rightfoot">
+          <div align="right">Last Updated: 18-08-2016</div>
+      </div></td>
+    </tr>
+  </table>
+
+
+
+
+
+</body>
+</html>
